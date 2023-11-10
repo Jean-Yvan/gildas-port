@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
 import MovieRow from "./MovieRow";
-import Banner from "./Banner";
+
 
 import MovieHeader from "./MovieHeader";
 
@@ -53,20 +53,13 @@ const movies = [
 
 
 const Movie = () =>{
+
+    const [currentMovie, setCurrentMovie] = useState(movies[0]);
+
     return (
         <div>
-            <MovieHeader imgUrl={movies[1].image} title={movies[1].title} description="I am a full stack web developer with a passion for creating
-                        interactive and responsive web applications. I have experience
-                        working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-                        Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-                        looking to expand my knowledge and skill set. I am a team player and
-    I am excited to work with others to create amazing applications."/> 
-            {/*<Banner imgUrl={movies[1].image} title={movies[1].title} description="I am a full stack web developer with a passion for creating
-                        interactive and responsive web applications. I have experience
-                        working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-                        Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-                        looking to expand my knowledge and skill set. I am a team player and
-    I am excited to work with others to create amazing applications." />*/}
+            <MovieHeader imgUrl={currentMovie.image} title={currentMovie.title} description={currentMovie.description}/> 
+            
             <MovieRow title="Long Metrage" movies={movies}/>
             <MovieRow title="Court Metrage" movies={movies}/>
             <MovieRow title="Spot Publicitaire" movies={movies}/>
