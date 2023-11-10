@@ -66,7 +66,7 @@ const ProjectsSection = ({projects}) =>{
           </div> : <div className="w-full flex items-center justify-center"><Loader/></div>
         }
         {
-          projects.length > 6 && <CustomButton title="Voir plus" handleClick={()=>{router.push("/movies")}} />
+          /*projects.length > 6 && <CustomButton title="Voir plus" handleClick={()=>{router.push("/movies")}} />*/
         }
         {
           showVideo && <Modal closeModal={()=>showVideoPlayer('')}>

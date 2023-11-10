@@ -56,11 +56,14 @@ const Movie = () =>{
 
     const [currentMovie, setCurrentMovie] = useState(movies[0]);
 
+    function handleMovieChange(newMovie){
+      setCurrentMovie(newMovie);
+    }
     return (
         <div>
             <MovieHeader imgUrl={currentMovie.image} title={currentMovie.title} description={currentMovie.description}/> 
             
-            <MovieRow title="Long Metrage" movies={movies}/>
+            <MovieRow title="Long Metrage" movies={movies} handleClick={handleMovieChange}/>
             <MovieRow title="Court Metrage" movies={movies}/>
             <MovieRow title="Spot Publicitaire" movies={movies}/>
         </div>

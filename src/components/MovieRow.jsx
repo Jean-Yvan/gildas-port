@@ -1,8 +1,10 @@
-import React from "react";
+import React,{ createContext } from "react";
 import Image from "next/image";
 import MovieCard from "./MovieCard";
 
-const MovieRow = ({movies,title}) =>{
+export const HandlerContext = createContext();
+
+const MovieRow = ({movies,title,handleClick}) =>{
     return (
         <div className="p-10">
             <h2 className="text-white ml-10 text-xl text-bold">{title}</h2>

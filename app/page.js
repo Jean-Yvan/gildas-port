@@ -7,7 +7,7 @@ import { getAllDocs, get } from "../src/lib/firebase/api";
 
 import Movie from "src/components/Movie";
 
-/*export default async function Page() {
+export default async function Page() {
   const data = await getData();
   return (
     <>
@@ -43,10 +43,10 @@ async function getData() {
   }
 
   return props;
-}*/
+}
 
-export default function Page(){
+/*export default function Page(){
   return (
       <Movie />
   );
-}
+}*/
